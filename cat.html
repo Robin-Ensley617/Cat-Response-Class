@@ -1,0 +1,61 @@
+<!DocType>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Robin's Media Query Demo</title>
+	
+
+	<link href="cat.css" rel="stylesheet">
+ <link rel="stylesheet" href="media-query-example1.css">
+<link rel="stylesheet" type="text/css" href="chrome-extension://laiognlohmgkmlfchcclnjnafgeinnpg/css/style.css"><style type="text/css">[id^=root], [id^=docs], .cc_cursor, body, .ogdlpmhglpejoiomcodnpjnfgcpmgale_default, body, html, input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input::-webkit-contacts-auto-fill-button, input:read-only {cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAABFtJREFUSEuNlX1M1WUUxz/P794LF2+8eOcL4gsYMBY5Xer8pzZXSpvLFs1FpaVFAmZtDs3lC1KA9kJWTkQTS9pqlb3JRGsrNqiRq9RcAWobgiEvIwIE4V7uvfx+T/vdH1x+XC7q88fdb885z/k855zvea7AtO6/j7jcF5jqdELtOaiqxnutmf9a+ug1+6VMIzJtNbO3bMSSlAhFxZD/Pg1mn9FvMfoxx8HCslLK4+eFL46IfojWNo22lvqeWTPaa5MT5cWd+bR8/ztfLktm/Y6tPOBy8/iypdhjouGnn2Hffjb9eJ6jwZAAIDOdmo8OsxwUiDoOymyQfSDdDHs76Gk/6hLa1es+HwmxMwlXlLFQPpeguYmGlIflIkA1QwKAzw5Q/3QG9waM0ScMiHn1Pwtq8/g9CYOdFjo6Zd+aHG3jXy18HRJQWkD95iwTQJkGjjfAmjrmHwIw7BYM9Sp035B8/oNWsLOY10MCstZQX1ZiAiDAuggchaA4jTNBAE0Fd5eCNiwYlpKuIa0gZfkkgLnR7G+5zLYJSrA/CREvApYRwLWAi/emwNNnNEOxQvhUtcA2fxJAfDTzL1+kKcIeQmz2Z0CZCe4PjcYDvkGjNAE5WqCtVz28eiVbG8EzQab6RuEWPHteJWwiQgFhA2mcU73g7laQakAjCAvgUPu37KDweAXvTgAkgH3dJk7tzSct1MCY9zz9At+AglAkeqsUG9ijNfSeqKogJ1duqztFyQXwBa7wQSFFWZnkmfU9GUj14b+9JVwixpLwu+uZDXhk75lqueH57VT6zSmxZFR+xbHkRKJud/vb2f29uaFQUa3+sbuYR8USsH1Ry9vzE8i1mKbTHEgbNlRiXoOdRg/CojSs4YZFAkPdumyhqUOjsVMuEJufICk9nbNpDzI9+HZ6M/VBGh4SOGZq48yuLgXVE1Qfk8elaxpXmuQCceE0S1JTOW8Pkqd3QOC9qd9Sb6KcANDtnhuTpKzAlVb1xGtvki1eeoq8Q+9R5E9R0yVo6FsPPLr0Zk6ZPj4DzWe8QeYlFOjpkwzZtNoVq9jcOkid2JvLYznrqYiMEGg+4S9J8HLEqhN6oEtysGMEIEC1aPx5mb9rfpUVZSUUtoNLjyPeeQWH1cqhtRk8F6EqIMcDbA6Jfer42+sHPX1GCfXsdr4l+5OS5drGZuoOfkKb+ckORIufwqzYuRzct4d7lqaKsJ4uEeP1Ehk3D7vDqaGYqqGX0vWvxa8W1aZxskqmZW6nKpSEQ8pgThROFBbGxZKyP08ULk4VM6xTpB8ipaEsXUH68/Bbg3r1ZAUrSr/lnzsGmB1357A0a50457Qr/qnVtW78wIBbcvoXrTh7F7uC/8lGY0wuZBNlVzaPvLxB+fQum4gJHLRA+4B6aeUq0q67aJ9swu8IoE97/hHWJCeI0vg44dRL9V2N1rs9n6ymHr651fNxR4CRAJbKcu4u/5gDMVE0dnZz7MxZ6m8VXLf9D4cUrMWExxEUAAAAAElFTkSuQmCC") 3 1 , auto !important; }[role^=button], button, .cc_pointer, [type="search"]::-webkit-search-cancel-button, a, select, [type="search"]::-webkit-search-decoration, .paper-button, .ytp-progress-bar-container, input[type=submit], :link, :visited, a > *, img, button, ::-webkit-scrollbar-button, .ogdlpmhglpejoiomcodnpjnfgcpmgale_pointer, ::-webkit-file-upload-button, button, .ytp-volume-panel, #myogdlpmhglpejoiomcodnpjnfgcpmgale .icon { cursor: url("data:image/png;base64,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") 3 2, auto !important; } * {cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAABFtJREFUSEuNlX1M1WUUxz/P794LF2+8eOcL4gsYMBY5Xer8pzZXSpvLFs1FpaVFAmZtDs3lC1KA9kJWTkQTS9pqlb3JRGsrNqiRq9RcAWobgiEvIwIE4V7uvfx+T/vdH1x+XC7q88fdb885z/k855zvea7AtO6/j7jcF5jqdELtOaiqxnutmf9a+ug1+6VMIzJtNbO3bMSSlAhFxZD/Pg1mn9FvMfoxx8HCslLK4+eFL46IfojWNo22lvqeWTPaa5MT5cWd+bR8/ztfLktm/Y6tPOBy8/iypdhjouGnn2Hffjb9eJ6jwZAAIDOdmo8OsxwUiDoOymyQfSDdDHs76Gk/6hLa1es+HwmxMwlXlLFQPpeguYmGlIflIkA1QwKAzw5Q/3QG9waM0ScMiHn1Pwtq8/g9CYOdFjo6Zd+aHG3jXy18HRJQWkD95iwTQJkGjjfAmjrmHwIw7BYM9Sp035B8/oNWsLOY10MCstZQX1ZiAiDAuggchaA4jTNBAE0Fd5eCNiwYlpKuIa0gZfkkgLnR7G+5zLYJSrA/CREvApYRwLWAi/emwNNnNEOxQvhUtcA2fxJAfDTzL1+kKcIeQmz2Z0CZCe4PjcYDvkGjNAE5WqCtVz28eiVbG8EzQab6RuEWPHteJWwiQgFhA2mcU73g7laQakAjCAvgUPu37KDweAXvTgAkgH3dJk7tzSct1MCY9zz9At+AglAkeqsUG9ijNfSeqKogJ1duqztFyQXwBa7wQSFFWZnkmfU9GUj14b+9JVwixpLwu+uZDXhk75lqueH57VT6zSmxZFR+xbHkRKJud/vb2f29uaFQUa3+sbuYR8USsH1Ry9vzE8i1mKbTHEgbNlRiXoOdRg/CojSs4YZFAkPdumyhqUOjsVMuEJufICk9nbNpDzI9+HZ6M/VBGh4SOGZq48yuLgXVE1Qfk8elaxpXmuQCceE0S1JTOW8Pkqd3QOC9qd9Sb6KcANDtnhuTpKzAlVb1xGtvki1eeoq8Q+9R5E9R0yVo6FsPPLr0Zk6ZPj4DzWe8QeYlFOjpkwzZtNoVq9jcOkid2JvLYznrqYiMEGg+4S9J8HLEqhN6oEtysGMEIEC1aPx5mb9rfpUVZSUUtoNLjyPeeQWH1cqhtRk8F6EqIMcDbA6Jfer42+sHPX1GCfXsdr4l+5OS5drGZuoOfkKb+ckORIufwqzYuRzct4d7lqaKsJ4uEeP1Ehk3D7vDqaGYqqGX0vWvxa8W1aZxskqmZW6nKpSEQ8pgThROFBbGxZKyP08ULk4VM6xTpB8ipaEsXUH68/Bbg3r1ZAUrSr/lnzsGmB1357A0a50457Qr/qnVtW78wIBbcvoXrTh7F7uC/8lGY0wuZBNlVzaPvLxB+fQum4gJHLRA+4B6aeUq0q67aJ9swu8IoE97/hHWJCeI0vg44dRL9V2N1rs9n6ymHr651fNxR4CRAJbKcu4u/5gDMVE0dnZz7MxZ6m8VXLf9D4cUrMWExxEUAAAAAElFTkSuQmCC") 3 1 , auto }a, button, [type^=button], [role^=button]   { cursor: url("data:image/png;base64,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") 3 2, auto }</style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1084.0" data-gr-ext-installed="">
+<!-- Google Analytics Tracking code s-->
+<script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89923459-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics code -->
+	
+	<h1>Media Query Demo</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, ipsum quae veritatis in nihil laudantium labore beatae nulla laborum rem. Error, molestiae eaque quod placeat at. Labore architecto minus accusantium.</p>
+	
+	<h2>Box Columns</h2>
+	
+<figure>
+	<img src="http://placekitten.com/452/450?image=12" alt="Placeholder kitteh">
+	<figcaption>Place Kittens are great</figcaption>
+</figure>	
+
+<figure>
+	<img src="http://placekitten.com/452/450?image=5" alt="Placeholder kitteh">
+	<figcaption>Place Kittens are great</figcaption>
+</figure>	
+
+<figure>
+	<img src="http://placekitten.com/452/450?image=1" alt="Placeholder kitteh">
+	<figcaption>Place Kittens are great</figcaption>
+</figure>	
+
+<figure>
+	<img src="http://placekitten.com/452/450?image=9" alt="Placeholder kitteh">
+	<figcaption>Place Kittens are great</figcaption>
+</figure>	
+
+<figure>
+	<img src="http://placekitten.com/452/450?image=6" alt="Placeholder kitteh">
+	<figcaption>Place Kittens are great</figcaption>
+</figure>	
+	
+	
+
+</body>
